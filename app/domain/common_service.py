@@ -35,7 +35,7 @@ def get_order(token, id_article):
 
     if response.status == 200:
         for obj in json.body_to_dic(response.read().decode('utf-8')):
-            if obj['status'] == 'PLACED':
+            if obj['status'] == 'PAYMENT_DEFINED':
                 order = get_specific_order(token, obj['id'], id_article)
                 if order != "":
                     return order

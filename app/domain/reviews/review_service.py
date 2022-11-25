@@ -40,11 +40,6 @@ def add_review(params, id_user):
 
     review = schema.new_review()
 
-    r = db.review.find_one({'id_user': id_user, 'id_article': params['id_article'], 'active': True})
-    if r:
-        r.update({"active": False, "updated": datetime.datetime.utcnow()})
-        db.review.replace_one({'id_user': id_user, 'id_article': params['id_article'], 'active': True}, r)
-
     review.update(params)
     review.update({"id_user": id_user})
 

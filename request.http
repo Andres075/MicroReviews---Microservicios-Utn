@@ -1,0 +1,71 @@
+### Crear usuario
+POST http://localhost:3000/v1/user
+Content-Type: application/json
+
+{
+  "name": "abcde",
+  "login": "abcde",
+  "password": "abcde"
+}
+
+### login
+POST http://localhost:3000/v1/user/signin
+Content-Type: application/json
+
+{
+  "login": "abcde",
+  "password": "abcde"
+}
+
+
+### POST reseña
+POST http://localhost:3006/v1/reviews/637fd264b9d8210007c83810
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklEIjoiNjM3ZmQzZGRjYWFjN2Y4Nzk5MzA0YmM5IiwidXNlcklEIjoiNjM3ZmNmNTNjYWFjN2Y4Nzk5MzA0YmM0In0.qVQbJTpn7qq28Wwv0ywzbWK5wTsdjqZjNOmy2gPpIUM
+
+{
+            "title": "Me gusto el producto",
+            "description": "buenisimo"
+}
+
+### DELETE reseña
+DELETE http://localhost:3006/v1/reviews/637fd264b9d8210007c83810
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklEIjoiNjM3ZmQzZGRjYWFjN2Y4Nzk5MzA0YmM5IiwidXNlcklEIjoiNjM3ZmNmNTNjYWFjN2Y4Nzk5MzA0YmM0In0.qVQbJTpn7qq28Wwv0ywzbWK5wTsdjqZjNOmy2gPpIUM
+
+
+### GET reseña
+GET http://localhost:3006/v1/reviews/637fd264b9d8210007c83810
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklEIjoiNjM3ZmQzZGRjYWFjN2Y4Nzk5MzA0YmM5IiwidXNlcklEIjoiNjM3ZmNmNTNjYWFjN2Y4Nzk5MzA0YmM0In0.qVQbJTpn7qq28Wwv0ywzbWK5wTsdjqZjNOmy2gPpIUM
+
+
+### POST puntuacion
+POST http://localhost:3006/v1/scores/637fd264b9d8210007c83810
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklEIjoiNjM3ZmQzZGRjYWFjN2Y4Nzk5MzA0YmM5IiwidXNlcklEIjoiNjM3ZmNmNTNjYWFjN2Y4Nzk5MzA0YmM0In0.qVQbJTpn7qq28Wwv0ywzbWK5wTsdjqZjNOmy2gPpIUM
+
+{
+            "value": 7
+}
+
+### DELETE puntuacion
+DELETE http://localhost:3006/v1/scores/637fd264b9d8210007c83810
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklEIjoiNjM3ZmQzZGRjYWFjN2Y4Nzk5MzA0YmM5IiwidXNlcklEIjoiNjM3ZmNmNTNjYWFjN2Y4Nzk5MzA0YmM0In0.qVQbJTpn7qq28Wwv0ywzbWK5wTsdjqZjNOmy2gPpIUM
+
+### GET puntuacion
+GET http://localhost:3006/v1/scores/637fd264b9d8210007c83810
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklEIjoiNjM3ZmQzZGRjYWFjN2Y4Nzk5MzA0YmM5IiwidXNlcklEIjoiNjM3ZmNmNTNjYWFjN2Y4Nzk5MzA0YmM0In0.qVQbJTpn7qq28Wwv0ywzbWK5wTsdjqZjNOmy2gPpIUM
+
+
+### Pagar orden
+POST http://localhost:3004/v1/orders/637fd2ed30c49e0007a2ab7d/payment
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbklEIjoiNjM3ZmQzZGRjYWFjN2Y4Nzk5MzA0YmM5IiwidXNlcklEIjoiNjM3ZmNmNTNjYWFjN2Y4Nzk5MzA0YmM0In0.qVQbJTpn7qq28Wwv0ywzbWK5wTsdjqZjNOmy2gPpIUM
+
+{
+    "method": "DEBIT",
+    "amount": "400000"
+}
